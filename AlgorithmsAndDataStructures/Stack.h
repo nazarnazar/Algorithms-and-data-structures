@@ -24,3 +24,11 @@ public:
 	int Pop();
 };
 
+
+/*Stack stack;
+stack.Push(5);
+stack.Push(6);
+stack.Push(7);
+
+cout << stack.Pop() << endl;
+cout << stack.Pop() << endl;*/
