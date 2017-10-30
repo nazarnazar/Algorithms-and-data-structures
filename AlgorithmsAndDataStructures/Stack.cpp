@@ -1,29 +1,25 @@
 #include "Stack.h"
 
 
-template <class Item>
-Stack<Item>::Stack()
+Stack::Stack()
 {
 	head = 0;
 }
 
-template <class Item>
-int Stack<Item>::Empty() const
+int Stack::Empty() const
 {
 	return (head == 0);
 }
 
-template <class Item>
-void Stack<Item>::Push(Item item)
+void Stack::Push(int item)
 {
 	head = new node(item, head);
 }
 
-template <class Item>
-Item Stack<Item>::Pop()
+int Stack::Pop()
 {
 	node* temp = head;
-	Item v = temp->value;
+	int v = temp->value;
 	head = head->next;
 	delete temp;
 	return v;

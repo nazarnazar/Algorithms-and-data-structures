@@ -1,16 +1,15 @@
 #pragma once
 
 
-template <class Item>
 class Stack
 {
 private:
 	struct node
 	{
-		Item value;
+		int value;
 		node* next;
 
-		node(Item v, node* n)
+		node(int v, node* n)
 		{
 			value = v;
 			next = n;
@@ -21,6 +20,7 @@ private:
 public:
 	Stack();
 	int Empty() const;
-	void Push(Item);
-	Item Pop();
+	void Push(int);
+	int Pop();
 };
+

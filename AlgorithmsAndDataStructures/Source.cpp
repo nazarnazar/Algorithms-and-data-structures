@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Stack.h"
-#include "Stack.cpp"
 
 
 using namespace std;
@@ -8,7 +7,7 @@ using namespace std;
 
 int main()
 {
-	Stack<int> stack;
+	Stack stack;
 	stack.Push(5);
 	stack.Push(6);
 	stack.Push(7);
