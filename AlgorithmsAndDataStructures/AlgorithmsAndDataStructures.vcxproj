@@ -146,11 +146,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Stack.cpp" />
     <ClCompile Include="UF.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Queue.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="UF.h" />
   </ItemGroup>

@@ -24,12 +24,18 @@
     <ClCompile Include="UF.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
+    <ClCompile Include="Queue.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Stack.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="UF.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
