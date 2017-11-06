@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Queue.h"
+#include "Complex.h"
 
 
 using namespace std;
@@ -7,7 +7,9 @@ using namespace std;
 
 int main()
 {
-	
+	float theta = 0;
+	Complex t(cos(theta), sin(theta));
+	cout << t << endl;
 
 	return 0;
 }
