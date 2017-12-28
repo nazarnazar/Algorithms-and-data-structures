@@ -60,3 +60,21 @@ void EasySorts::AdaptiveBubble(int * a, int size)
 			break;
 	}
 }
+
+void EasySorts::Shell(int * a, int size)
+{
+	int h;
+	for (h = 1; h < size / 9; h = 3 * h + 1);
+	for (; h > 0; h /= 3)
+		for (int i = h; i < size; i++)
+		{
+			int j = i;
+			int v = a[i];
+			while (j > h && v < a[j - h])
+			{
+				a[j] = a[j - h];
+				j -= h;
+			}
+			a[j] = v;
+		}
+}

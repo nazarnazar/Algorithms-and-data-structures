@@ -8,4 +8,5 @@ public:
 	void AdaptiveInsertion(int * a, int size);
 	void Selection(int * a, int size);
 	void AdaptiveBubble(int * a, int size);
+	void Shell(int * a, int size);
 };
