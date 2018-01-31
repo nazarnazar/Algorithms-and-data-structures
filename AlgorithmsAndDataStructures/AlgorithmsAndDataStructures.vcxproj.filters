@@ -30,7 +30,7 @@
     <ClCompile Include="Complex.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="EasySorts.cpp">
+    <ClCompile Include="Sorts.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,7 +47,7 @@
     <ClInclude Include="Complex.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="EasySorts.h">
+    <ClInclude Include="Sorts.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>

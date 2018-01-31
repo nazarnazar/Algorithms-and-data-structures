@@ -1,6 +1,6 @@
-#include "EasySorts.h"
+#include "Sorts.h"
 
-void EasySorts::NonadaptiveInsertion(int * a, int size)
+void Sorts::NonadaptiveInsertion(int * a, int size)
 {
 	for (int i = 1; i < size; i++)
 		for (int j = i; j > 0; j--)
@@ -12,7 +12,7 @@ void EasySorts::NonadaptiveInsertion(int * a, int size)
 			}
 }
 
-void EasySorts::AdaptiveInsertion(int * a, int size)
+void Sorts::AdaptiveInsertion(int * a, int size)
 {
 	for (int i = 1; i < size; i++)
 	{
@@ -27,7 +27,7 @@ void EasySorts::AdaptiveInsertion(int * a, int size)
 	}
 }
 
-void EasySorts::Selection(int * a, int size)
+void Sorts::Selection(int * a, int size)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -41,7 +41,7 @@ void EasySorts::Selection(int * a, int size)
 	}
 }
 
-void EasySorts::AdaptiveBubble(int * a, int size)
+void Sorts::AdaptiveBubble(int * a, int size)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -61,7 +61,7 @@ void EasySorts::AdaptiveBubble(int * a, int size)
 	}
 }
 
-void EasySorts::Shell(int * a, int size)
+void Sorts::Shell(int * a, int size)
 {
 	int h;
 	for (h = 1; h < size / 9; h = 3 * h + 1);
@@ -77,4 +77,34 @@ void EasySorts::Shell(int * a, int size)
 			}
 			a[j] = v;
 		}
+}
+
+int Sorts::Partition(int * a, int l, int r)
+{
+	int i = l - 1;
+	int j = r;
+	int v = a[r];
+	int temp;
+
+	for (;;)
+	{
+		while (a[++i] < v);
+		while (a[--j] > v) if (j == 0) break;
+		if (i >= j) break;
+		temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
+	}
+	temp = a[i];
+	a[i] = a[r];
+	a[r] = temp;
+	return i;
+}
+
+void Sorts::Quicksort(int * a, int l, int r)
+{
+	if (r <= l) return;
+	int i = Partition(a, l, r);
+	Quicksort(a, l, i - 1);
+	Quicksort(a, i + 1, r);
 }

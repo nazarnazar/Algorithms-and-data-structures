@@ -1,7 +1,7 @@
 #pragma once
 
 
-class EasySorts
+class Sorts
 {
 public:
 	void NonadaptiveInsertion(int * a, int size);
@@ -9,4 +9,6 @@ public:
 	void Selection(int * a, int size);
 	void AdaptiveBubble(int * a, int size);
 	void Shell(int * a, int size);
+	void Quicksort(int * a, int l, int r);
+	int Partition(int * a, int l, int r);
 };
